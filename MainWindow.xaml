@@ -1,0 +1,27 @@
+﻿<Window x:Class="Workshop_Prosit2_Graphique.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Workshop_Prosit2_Graphique"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label 
+            x:Name="NameLabel"
+            Content=""
+            FontWeight="Bold" Margin="0,267,0,-267"/>
+        <TextBox
+            x:Name="MainTextBox"
+            Width="372"
+            Height="70"
+            HorizontalAlignment="Left" Margin="0,66,0,268"/>
+        <Button x:Name="NameInputButton"
+                    Width="134"
+                    Margin="33,181,0,191"
+                    HorizontalAlignment="Left"
+                    Content="Transform"
+                    Click="NameInputButton_Click"/>
+
+    </Grid>
+</Window>
