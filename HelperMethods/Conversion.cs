@@ -6,21 +6,24 @@ namespace Workshop_Prosit2_Graphique.HelperMethods
 {
     class Conversion
     {
+        private int Convertion;
+        private char Character;
+        private byte[] AsciiBytes;
         public string Convert(string ChainToConvert, string Converted)
         {
-            byte[] asciiBytes = Encoding.ASCII.GetBytes(ChainToConvert);
+            AsciiBytes = Encoding.ASCII.GetBytes(ChainToConvert);
             for (int i = 0; i < ChainToConvert.Length; i++)
             {
-                if (asciiBytes[i] < 123 && asciiBytes[i] > 96)
+                if (AsciiBytes[i] < 123 && AsciiBytes[i] > 96)
                 {
-                    int convertion = asciiBytes[i] - 32;
-                    char character = (char)convertion;
-                    Converted += character.ToString();
+                    Convertion = AsciiBytes[i] - 32;
+                    Character = (char)Convertion;
+                    Converted += Character.ToString();
                 }
                 else
                 {
-                    char character = (char)asciiBytes[i];
-                    Converted += character.ToString();
+                    Character = (char)AsciiBytes[i];
+                    Converted += Character.ToString();
                 }
             }
             Console.WriteLine(Converted);
